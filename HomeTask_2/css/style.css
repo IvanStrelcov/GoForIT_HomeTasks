@@ -1,0 +1,146 @@
+.wrapper{
+	width: 1060px;
+	margin: 0 auto;
+	padding-top: 50px; /*Как ты и учил сделал так, чтобы не делать logo img верхний марджин*/
+	padding-bottom: 60px;
+	box-shadow: 0px 0px 4px 4px rgba(219,219,219,0.75);
+}
+.content-wrapp{
+	width: 966px;
+	margin: 0 auto;
+}
+
+
+/*HEADER*/
+/*СДЕЛАЛ LOGO как ссылку с изображением*/
+.logo img{
+	margin-bottom: 40px;
+}
+
+
+/* MAINMENU*/
+.main-menu-list{
+	margin-bottom: 40px;
+}
+.main-menu-list li{
+	display: inline-block;
+	width: 99px;
+	height: 40px;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	text-align: center;
+	line-height: 40px;
+}
+.main-menu-list li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+}
+
+
+/*CONTAINER в который засунул левую менюху и правый контент*/
+.container{
+	width: 100%;
+	height: 640px; /*Задал высоту потому что футер прилипал к хедеру*/
+}
+.left-menu{
+	display: inline-block;
+	width: 240px;
+	float: left;
+}
+.left-menu-list li{
+	display: block;
+	width: 100%;
+	height: 38px;
+	border-top: 1px solid #c8c8c8;
+	border-left: 1px solid #c8c8c8;
+	border-right: 1px solid #c8c8c8;
+	line-height: 38px;
+}
+.left-menu-list li:last-child{
+	border-bottom: 1px solid #c8c8c8;
+}
+.left-menu-list li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding-left: 23px;
+	transition-property: padding-left;  /*Сделал чтоб резко не дергалось, до этого не знал как, но гугл помогает)))*/
+	transition-duration: 0.5s;
+	text-decoration: none;
+	font-size: 14px;
+	color: #656363;
+}
+.left-menu-list li a:hover{
+	padding-left: 35px;
+	transition-property: padding-left;
+	transition-duration: 0.5s;
+	color: #2c2c2c;
+}
+.left-menu-list li:hover{
+	background-color: #f9f9f9;
+}
+
+
+/*Основной контент*/
+.main-content{
+	display: inline-block;
+	width: 678px;
+	float: right;
+}
+.image-box{
+	height: 398px;
+	border: 1px solid #c8c8c8;
+	text-align: center;
+}
+.image-box img{
+	padding-top: 45px; /*Получилось вертикально выровнять, только таким образом(*/
+}
+.content-text-box{
+	padding: 24px;
+	color: #2c2c2c;
+	font-size: 14px;
+	line-height: 22px;  /*Честно сделал на глаз, с применением линейки от средины междустрочья до следующей средины междустрочья. Почти тот же эффект если поставить 1.5*/
+}
+
+
+/*FOOTER*/
+.footer{
+	width: 100%;
+	height: 40px;
+	background-color: #e1e1e1;
+	line-height: 40px;
+	font-size: 14px;
+}
+.footer-menu-list-box{
+	display: inline-block;
+	width: 70%; /*Чтоб Спан с текстом влез в блок футера*/ 
+}
+.footer-menu-list{
+	padding-left: 25px;
+}
+.footer-menu-list li{
+	display: inline;
+	padding-right: 100px;
+}
+.footer-menu-list li a{
+	text-decoration: none;
+	color: #2c2c2c;
+}
+.footer-menu-list li a:hover{
+	text-decoration: underline;
+	text-decoration-color: #8d8d8d;
+}
+.copyright{
+	float: right;
+	padding-right: 27px;
+	color: #2c2c2c;
+}
+
+
+/*CLEAR FIX*/
+.clrfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
