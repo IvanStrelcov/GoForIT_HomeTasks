@@ -1,0 +1,237 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Tahoma, sans-serif;
+	background-color: #0c739f;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.wrapper{
+	display: table;
+	height: 100%;
+	width: 100%;
+	min-width: 1000px;
+	overflow: hidden;
+	table-layout: fixed;
+}
+.wrapper-content{
+	display: table-row;
+	width: 1000px;
+	height: 100%;
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
+	-moz-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
+	box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
+}
+.header{
+	position: relative;
+	width: 100%;
+	background-image: url(../img/gifka.gif) repeat-x;
+	background: rgba(16,205,225,1);
+    background: -moz-linear-gradient(top, rgba(16,205,225,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(16,205,225,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(16,205,225,1) 0%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(16,205,225,1) 0%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(16,205,225,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(16,205,225,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10cde1', endColorstr='#ffffff', GradientType=0 );
+}
+.content-wrapper--width{
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
+	-moz-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
+	box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
+}
+.logo-wrapper{
+	float: left;
+	width: 30%;
+	padding-left: 26px;
+}
+.logo-wrapper img{
+	display: block;
+	position: absolute;
+	bottom: 0;
+}
+.right-side-wrapper{
+	float: right;
+	width: 70%;
+	padding-right: 30px;
+}
+.contacts-list-wrapper{
+	float: right;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 30px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.contacts-list{
+	float: right;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.country-list-wrapper{
+	float: right;
+}
+.country-list li{
+	display: inline-block;
+	text-align: center;
+	padding: 0 8px;
+}
+.country-list a{
+	
+}
+.country-list a p{
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	color: #128aa7;
+}
+.banner-background{
+	width: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#41c6d3+0,0c739f+100 */
+    background: rgb(65,198,211); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgb(65,198,211) 0%, rgb(12,115,159) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgb(65,198,211) 0%,rgb(12,115,159) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgb(65,198,211) 0%,rgb(12,115,159) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41c6d3', endColorstr='#0c739f',GradientType=0 ); /* IE6-9 */
+}
+.banner{
+	
+}
+.main-background{
+	width: 100%;
+	background-color: #0c739f;
+}
+.nav-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #303030;
+	text-align: center;
+}
+.nav-list li{
+	margin: 0 20px;
+	display: inline-block;
+	position: relative;
+}
+.nav-list a{
+	display: block;
+	padding: 8px 10px 10px;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+/*ТРЕУГОЛНИКИ*/
+
+.triangle--parent{
+	position: relative;
+}
+.triangle--parent:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 2.5px 0 2.5px;
+	border-color: #ffffff transparent transparent transparent;
+}
+
+/*ВЫПАДАЮЩЕЕ МЕНЮ*/
+
+.sub-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+	-webkit-transition: 0.25s linear opacity;
+	-o-transition: 0.25s linear opacity;
+	transition: 0.25s linear opacity;
+}
+.sub-list li{
+	display: block;
+	background-color: #303030;
+	text-align: left;
+}
+.sub-list li a{
+	display: block;
+	white-space: nowrap;
+	padding: 6px 44px 6px 10px;
+	
+}
+.nav-list li:hover ul{
+	left: -15px;
+	opacity: 1;
+}
+
+/*MAIN*/
+
+.main{
+	overflow: hidden;             /*закоментишь эту строку и разкоментишь нижние 2 строки и будет как на фотках которые я прислал... В целом я считаю сделал двумя способами не используя флекс боксы и дисплей-тайблы*/ 
+	/*padding-bottom: 10000px;*/    /*БАТЯ Я СТАРАЛСЯ*/
+	/*margin-bottom: -10000px;*/     /*Не засчитаешь работу - СИГАНУ С БАЛКОНА :*(... благо этаж второй*/
+	background-color: #fff;
+	padding-bottom: 15px; /*ЕСЛИ УДАЛИТЬ ВЕСЬ КОНТЕНТ ОН ОСТАЕТЬСЯ, это печально ((( без него последняя строка липнит к низу колонки, не работает при юзании -марджина и падинга*/
+}
+.main-left{
+	float: left;
+	border-right: 1px solid #c7cacf;
+}
+.main-right{
+	float: right;
+	border-left: 1px solid #c7cacf;
+}
+.main-column{
+	padding-bottom: 10000px;
+	margin-bottom: -10000px;
+	width: 208px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #424c43;
+	background-color: #edeef0;
+}
+.main-column h2{
+	margin: 0;
+	padding: 12px 0 12px 0;
+	font-size: 18px;
+}
+.main-center{
+	padding-bottom: 10000px;
+	margin-bottom: -10000px;
+}
+
+/*FOOTER*/
+
+.footer{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	background-color: #0c739f;
+	z-index: 1000;
+}
+.footer-wrapper{
+	padding: 8px 0 12px 0;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+}	
