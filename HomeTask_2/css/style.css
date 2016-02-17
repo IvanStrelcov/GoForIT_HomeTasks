@@ -1,129 +1,166 @@
-.wrapper{
-	width: 1060px;
-	margin: 0 auto;
-	padding-top: 50px; /*Как ты и учил сделал так, чтобы не делать logo img верхний марджин*/
-	padding-bottom: 60px;
-	box-shadow: 0px 0px 4px 4px rgba(219,219,219,0.75);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic&subset=latin,cyrillic); /*я конечно сделал, но момент дз шрифты мы еще не проходили если че*/
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-.content-wrapp{
-	width: 966px;
-	margin: 0 auto;
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 }
 
+
+.wrapper{
+	display: table;
+	overflow: hidden;
+	table-layout: fixed;
+	height: 100%;
+	width: 100%;
+	min-width: 1060px;
+}
+.container{
+	display: table-row;
+	height: 100%;
+}
+.page--width{
+	padding: 0 10px;
+	width: 1040px;
+	margin: 0 auto;
+}
 
 /*HEADER*/
 /*СДЕЛАЛ LOGO как ссылку с изображением*/
+.header{
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
 .logo img{
 	margin-bottom: 40px;
 }
 
-
 /* MAINMENU*/
+.main-menu{	
+	background: rgb(94,94,94); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(94,94,94,1) 0%, rgba(68,67,67,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(94,94,94,1) 0%,rgba(68,67,67,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(94,94,94,1) 0%,rgba(68,67,67,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e5e5e', endColorstr='#444343',GradientType=0); /* IE6-9 */
+}
 .main-menu-list{
-	margin-bottom: 40px;
+	margin: 0;
+	padding: 0;
 }
 .main-menu-list li{
 	display: inline-block;
-	width: 99px;
-	height: 40px;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
-	text-align: center;
-	line-height: 40px;
+}
+.main-menu li:hover{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4a4a4a+0,2e2e2e+100 */
+    background: rgb(74,74,74); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(74,74,74,1) 0%, rgba(46,46,46,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(74,74,74,1) 0%,rgba(46,46,46,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(74,74,74,1) 0%,rgba(46,46,46,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a4a4a', endColorstr='#2e2e2e',GradientType=0 ); /* IE6-9 */
+    border-left: 1px solid #838383;
+    border-right: 1px solid #838383;
 }
 .main-menu-list li a{
+	display: block;
+	padding: 14px 71px 16px 25px;
 	text-decoration: none;
 	color: #fff;
-	font-size: 14px;
 }
-
 
 /*CONTAINER в который засунул левую менюху и правый контент*/
-.container{
+.main{
 	width: 100%;
-	height: 640px; /*Задал высоту потому что футер прилипал к хедеру*/
 }
 .left-menu{
-	display: inline-block;
-	width: 240px;
+	display: block;
+	width: 240px;  /*выключи ее и посмотри что будет при навведении на бытовую технику*/
 	float: left;
+	margin-right: 48px;
+}
+.left-menu-list{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #c8c8c8;
+}
+.left-menu-list li{
+	border-bottom: 1px solid #c8c8c8;
+}
+.left-menu-list li:last-child{
+	border-bottom: none;
 }
 .left-menu-list li{
 	display: block;
 	width: 100%;
-	height: 38px;
-	border-top: 1px solid #c8c8c8;
-	border-left: 1px solid #c8c8c8;
-	border-right: 1px solid #c8c8c8;
-	line-height: 38px;
-}
-.left-menu-list li:last-child{
-	border-bottom: 1px solid #c8c8c8;
 }
 .left-menu-list li a{
-	display: inline-block;
+	display: block;
 	width: 100%;
-	height: 100%;
-	padding-left: 23px;
-	transition-property: padding-left;  /*Сделал чтоб резко не дергалось, до этого не знал как, но гугл помогает)))*/
-	transition-duration: 0.5s;
+	padding: 14px 23px 16px 23px;
 	text-decoration: none;
-	font-size: 14px;
 	color: #656363;
+	transition-property: padding-left;
+	transition-duration: 0.5s;
 }
 .left-menu-list li a:hover{
 	padding-left: 35px;
-	transition-property: padding-left;
-	transition-duration: 0.5s;
+	padding-right: 11px;
 	color: #2c2c2c;
 }
 .left-menu-list li:hover{
 	background-color: #f9f9f9;
 }
 
-
 /*Основной контент*/
 .main-content{
-	display: inline-block;
-	width: 678px;
-	float: right;
+	display: block;
+	overflow: hidden;
 }
 .image-box{
-	height: 398px;
+	padding: 55px 0;
 	border: 1px solid #c8c8c8;
 	text-align: center;
-}
-.image-box img{
-	padding-top: 45px; /*Получилось вертикально выровнять, только таким образом(*/
 }
 .content-text-box{
 	padding: 24px;
 	color: #2c2c2c;
-	font-size: 14px;
-	line-height: 22px;  /*Честно сделал на глаз, с применением линейки от средины междустрочья до следующей средины междустрочья. Почти тот же эффект если поставить 1.5*/
+	line-height: 22px;
 }
-
 
 /*FOOTER*/
 .footer{
+	overflow: hidden;
+	margin-bottom: 60px;	
+}
+.footer-wrapper{
 	width: 100%;
-	height: 40px;
+	height: 100%;
 	background-color: #e1e1e1;
-	line-height: 40px;
-	font-size: 14px;
 }
 .footer-menu-list-box{
-	display: inline-block;
-	width: 70%; /*Чтоб Спан с текстом влез в блок футера*/ 
+	display: block;
+	float: left;
+	padding-left: 25px;
+
 }
 .footer-menu-list{
-	padding-left: 25px;
+	margin: 0;
+	padding: 0;
 }
 .footer-menu-list li{
-	display: inline;
-	padding-right: 100px;
+	display: inline-block;
+	margin: 0 80px 0 10px;
 }
 .footer-menu-list li a{
+	display: block;
+	padding: 10px;
 	text-decoration: none;
 	color: #2c2c2c;
 }
@@ -133,13 +170,14 @@
 }
 .copyright{
 	float: right;
-	padding-right: 27px;
+	padding: 10px;
+	margin-right: 17px;
 	color: #2c2c2c;
 }
 
-
 /*CLEAR FIX*/
-.clrfix:after{
+
+.clearfix:after{
 	content: '';
 	display: block;
 	clear: both;
