@@ -21,11 +21,11 @@ html, body{
 	width: 100%;
 	min-width: 1060px;
 }
-.container{
+.w1{
 	display: table-row;
-	height: 100%;
+	height: 100%;	
 }
-.page--width{
+.container{
 	padding: 0 10px;
 	width: 1040px;
 	margin: 0 auto;
@@ -70,7 +70,7 @@ html, body{
 }
 .main-menu-list li a{
 	display: block;
-	padding: 14px 71px 16px 25px;
+	padding: 14px 22px 16px 22px;
 	text-decoration: none;
 	color: #fff;
 }
