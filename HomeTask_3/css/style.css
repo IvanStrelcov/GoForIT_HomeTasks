@@ -27,14 +27,11 @@ html, body{
 	display: table-row;
 	width: 1000px;
 	height: 100%;
-	-webkit-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
-	-moz-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
-	box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
 }
 .header{
 	position: relative;
 	width: 100%;
-	background-image: url(../img/gifka.gif) repeat-x;
+	background-image: url("../img/gifka.gif") repeat-x;
 	background: rgba(16,205,225,1);
     background: -moz-linear-gradient(top, rgba(16,205,225,1) 0%, rgba(255,255,255,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(16,205,225,1)), color-stop(100%, rgba(255,255,255,1)));
@@ -44,13 +41,51 @@ html, body{
     background: linear-gradient(to bottom, rgba(16,205,225,1) 0%, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10cde1', endColorstr='#ffffff', GradientType=0 );
 }
-.content-wrapper--width{
+.header:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 28px;
+	border-bottom: 1px solid #5ef0ff;
+	background: #128aa7;
+
+}
+.container{
+	position: relative;
 	width: 1000px;
+	height: 100%;
 	margin: 0 auto;
 	background: #fff;
-	-webkit-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
-	-moz-box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
-	box-shadow: 0px 0px 10px 4px rgba(30,140,152,1);
+}
+.shadow-box-2:after{
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 3px;
+	height: 100%;
+	-webkit-box-shadow: 5px 0px 5px 0px rgba(109,156,162,1);
+	-moz-box-shadow: 5px 0px 5px 0px rgba(109,156,162,1);
+	box-shadow: 5px 0px 5px 0px rgba(109,156,162,1);
+}
+.shadow-box, .shadow-box-2{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.shadow-box:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 3px;
+	height: 100%;
+	-webkit-box-shadow: -5px 0px 5px 0px rgba(109,156,162,1);
+	-moz-box-shadow: -5px 0px 5px 0px rgba(109,156,162,1);
+	box-shadow: -5px 0px 5px 0px rgba(109,156,162,1);
 }
 .logo-wrapper{
 	float: left;
@@ -100,12 +135,12 @@ html, body{
 }
 .banner-background{
 	width: 100%;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#41c6d3+0,0c739f+100 */
-    background: rgb(65,198,211); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgb(65,198,211) 0%, rgb(12,115,159) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgb(65,198,211) 0%,rgb(12,115,159) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgb(65,198,211) 0%,rgb(12,115,159) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41c6d3', endColorstr='#0c739f',GradientType=0 ); /* IE6-9 */
+	
+    background: rgb(65,198,211);
+    background: -moz-linear-gradient(top,  rgb(65,198,211) 0%, rgb(12,115,159) 100%);
+    background: -webkit-linear-gradient(top,  rgb(65,198,211) 0%,rgb(12,115,159) 100%);
+    background: linear-gradient(to bottom,  rgb(65,198,211) 0%,rgb(12,115,159) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41c6d3', endColorstr='#0c739f',GradientType=0 );
 }
 .banner{
 	
@@ -134,7 +169,7 @@ html, body{
 	font-size: 14px;
 }
 
-/*ТРЕУГОЛНИКИ*/
+/*TRIANGLES*/
 
 .triangle--parent{
 	position: relative;
@@ -154,7 +189,7 @@ html, body{
 	border-color: #ffffff transparent transparent transparent;
 }
 
-/*ВЫПАДАЮЩЕЕ МЕНЮ*/
+/*DROPDOWN-MENU*/
 
 .sub-list{
 	margin: 0;
@@ -186,11 +221,9 @@ html, body{
 /*MAIN*/
 
 .main{
-	overflow: hidden;             /*закоментишь эту строку и разкоментишь нижние 2 строки и будет как на фотках которые я прислал... В целом я считаю сделал двумя способами не используя флекс боксы и дисплей-тайблы*/ 
-	/*padding-bottom: 10000px;*/    /*БАТЯ Я СТАРАЛСЯ*/
-	/*margin-bottom: -10000px;*/     /*Не засчитаешь работу - СИГАНУ С БАЛКОНА :*(... благо этаж второй*/
-	background-color: #fff;
-	padding-bottom: 15px; /*ЕСЛИ УДАЛИТЬ ВЕСЬ КОНТЕНТ ОН ОСТАЕТЬСЯ, это печально ((( без него последняя строка липнит к низу колонки, не работает при юзании -марджина и падинга*/
+	padding-bottom: 15px;
+	overflow: hidden;             
+	background-color: #fff;	
 }
 .main-left{
 	float: left;
@@ -204,11 +237,11 @@ html, body{
 	padding-bottom: 10000px;
 	margin-bottom: -10000px;
 	width: 208px;
+	line-height: 2.5;
+	background-color: #edeef0;
+	color: #424c43;
 	text-align: center;
 	font-size: 14px;
-	line-height: 1.5;
-	color: #424c43;
-	background-color: #edeef0;
 }
 .main-column h2{
 	margin: 0;
@@ -230,8 +263,22 @@ html, body{
 	z-index: 1000;
 }
 .footer-wrapper{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
 	padding: 8px 0 12px 0;
 	color: #ffffff;
 	font-size: 12px;
 	text-align: center;
-}	
+}
+.footer-wrapper:before{
+	content: '';
+	position: absolute;
+	display: block;
+	top: -12px;
+	width: 100%;
+	height: 12px;
+	-webkit-box-shadow: 0px 8px 4px -4px rgba(3,29,40,1);
+	-moz-box-shadow: 0px 8px 4px -4px rgba(3,29,40,1);
+	box-shadow: 0px 8px 4px -4px rgba(3,29,40,1);
+}
