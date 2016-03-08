@@ -1,4 +1,14 @@
-
+@font-face {
+    font-family: 'lucida_sans_unicoderegular';
+    src: url('../fonts/ufonts.com_lucida-sans-unicode-webfont.eot');
+    src: url('../fonts/ufonts.com_lucida-sans-unicode-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ufonts.com_lucida-sans-unicode-webfont.woff2') format('woff2'),
+         url('../fonts/ufonts.com_lucida-sans-unicode-webfont.woff') format('woff'),
+         url('../fonts/ufonts.com_lucida-sans-unicode-webfont.ttf') format('truetype'),
+         url('../fonts/ufonts.com_lucida-sans-unicode-webfont.svg#lucida_sans_unicoderegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -12,7 +22,7 @@ html, body {
 	font-family: Arial, Tahoma, sans-serif;
 }
 
-/*ПРИЖИМАЕМ ФУТЕР К НИЗУ ОКНА*/
+/*push the footer to the bottom of the page*/
 .wrapper {
 	display: table;
 	height: 100%;
@@ -29,7 +39,7 @@ html, body {
 	overflow: hidden;
 }
 
-/*     /ПРИЖИМАЕМ ФУТЕР К НИЗУ ОКНА      */
+/*     /push the footer to the bottom of the page      */
 
 /*CLEARFIX*/
 
@@ -41,7 +51,7 @@ html, body {
 
 /*    /CLEARFIX    */
 
-/*ЗАДАЛ, ОГРАНИЧЕВАЮЩИЙ ШИРИНУ КОНТЕНТА БЛОК*/
+/*limiting the width of content block*/
 
 .container {
 	width: 900px;
@@ -49,7 +59,7 @@ html, body {
 	padding: 0 4px;
 }
 
-/*   /ЗАДАЛ, ОГРАНИЧЕВАЮЩИЙ ШИРИНУ КОНТЕНТА БЛОК    */
+/*   /limiting the width of content block    */
 
 
 .header {
@@ -105,7 +115,8 @@ html, body {
 	left: 7px;
 	background: url("../img/icon-male.png");
 }
-.header input {
+.login,
+.password {
 	width: 113px;
 	padding-left: 4px;
 	color: #97a2a6;
@@ -117,9 +128,14 @@ html, body {
 	font-size: 10px;
 }
 .exit {
-	padding: 0 4px; 
+	padding: 0 4px;
+	border: none;
 	border-right: 1px solid #fff;
+	outline: none;
+	background: inherit;
+	color: #fff;
 	opacity: 1;
+	font-size: 10px;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
@@ -213,7 +229,7 @@ html, body {
 .nav-list-box {
 	margin-left: 86px;
 	float: left;
-	font-family: 'Lucida sans unicode', Arial, Tahoma, sens-serif;
+	font-family: 'lucida_sans_unicoderegular', Arial, Tahoma, sens-serif;
 }
 .navigation ul {
 	margin: 0;
@@ -276,8 +292,7 @@ html, body {
 .main {
 	margin-bottom: 40px;
 }
-.left-sidebar,
-.right-sidebar {
+.sidebar {
 	width: 182px;
 }
 .left-sidebar {
@@ -288,8 +303,7 @@ html, body {
 	float: right;
 	padding-left: 8px;
 }
-.left-sidebar > p,
-.right-sidebar > p,
+.title,
 .filter-title {
 	padding-top: 1px;
 	padding-bottom: 2px;
@@ -299,14 +313,12 @@ html, body {
 	font-size: 12px;
 	line-height: 1.6;
 }
-.left-sidebar > p > span,
-.right-sidebar > p > span,
+.title > span,
 .filter-title > img {
 	padding-left: 2px;
 	padding-right: 5px;
 }
-.left-sidebar > p > span > img,
-.right-sidebar > p > span > img,
+.title > span > img,
 .filter-title img {
 	vertical-align: bottom;	
 }
@@ -314,11 +326,10 @@ html, body {
 	display: inline-block;
 	padding-right: 56px;
 }
-.left-sidebar ul,
-.right-sidebar ul {
+.sidebar ul {
 	margin: 0;
 	color: #465961;
-	font-family: 'Lucida sans unicode', sans-sarif;
+	font-family: 'lucida_sans_unicoderegular', sans-sarif;
 	font-size: 12px;
 	list-style: none;
 }
@@ -376,7 +387,6 @@ html, body {
 	background: -webkit-linear-gradient(top,  rgba(229,231,232,1) 0%,rgba(147,167,176,1) 100%);
 	background: linear-gradient(to bottom,  rgba(229,231,232,1) 0%,rgba(147,167,176,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e7e8', endColorstr='#93a7b0',GradientType=0 );
-
 }
 .item {
 	width: 140px;
@@ -387,14 +397,14 @@ html, body {
 .item a {
 	display: block;
 	text-decoration: none;
+	font-family: 'lucida_sans_unicoderegular';
 }
 .item a strong {
 	color: #206988;
 	font-size: 14px;
 }
-.item a > p {
-	margin: 0;
-	padding: 0;
+.item-description {
+	display: inline-block;
 	color: #1f2528;
 	font-size: 12px;
 }
@@ -414,6 +424,8 @@ html, body {
 	padding: 0;
 	color: #114165;
 	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
 }
 /*    /main     */
 
@@ -455,6 +467,7 @@ html, body {
 	text-align: center;
 }
 .footer > .container {
+	padding-top: 10px;
 	padding-bottom: 50px;
 	border-top: 1px solid #242c3e;
 	background: #213a4d;
@@ -465,8 +478,8 @@ html, body {
 	padding: 0;
 	list-style: none;
 	font-size: 0;
-	letter-spacing: -0.36em;
-	word-spacing: -0.36em;
+	letter-spacing: 0;
+	word-spacing: 0;
 }
 .footer .container ul li {
 	margin: 0;
@@ -495,7 +508,7 @@ html, body {
 .footer .container p {
 	margin-top: 14px;
 	padding: 0;
-	color: #7a878f;
+	color: #7f4740;
 	font-size: 10px;
 }
 
