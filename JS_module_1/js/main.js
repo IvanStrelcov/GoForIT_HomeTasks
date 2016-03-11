@@ -24,7 +24,7 @@ function login(){
 	   		continue;
 		}
 		else {
-			alert('NOname');
+			alert('ERROR');
 			return;
 		}
 	} 
