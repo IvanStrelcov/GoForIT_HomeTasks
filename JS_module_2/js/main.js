@@ -43,11 +43,11 @@ var dom = {
 
 					var label = document.createElement('label');
 					label.className = 'my-label';
-					label.innerHTML = data.label + i;
+					label.innerHTML = data.label + j;
 					label.setAttribute('for', 'checkbox' + id);
 					item.appendChild(label);
 
-					id += 1;
+					id ++;
 				}
 				
 			}
