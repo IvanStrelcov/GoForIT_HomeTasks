@@ -2,70 +2,52 @@ var data = {
 	'pageTitle': 'Тест по программированию',
 	'questions': [
 		{
-			'questionTitle': '1. Вопрос №1',
+			'questionTitle': 'Вопрос №',
 			'questionList': [
 				{
 					'label': 'Вариант ответа №1',
-					'id': 'checkbox-1',
-					'type': 'checkbox',
-					'for': 'checkbox-1'
+					'id': 'checkbox-1'
 				},
 				{
 					'label': 'Вариант ответа №2',
-					'id': 'checkbox-2',
-					'type': 'checkbox',
-					'for': 'checkbox-2'
+					'id': 'checkbox-2'
 				},
 				{
 					'label': 'Вариант ответа №3',
-					'id': 'checkbox-3',
-					'type': 'checkbox',
-					'for': 'checkbox-3'
+					'id': 'checkbox-3'
 				}]
 
 		},
 		{
-			'questionTitle': '2. Вопрос №2',
+			'questionTitle': 'Вопрос №',
 			'questionList': [
 				{
 					'label': 'Вариант ответа №1',
-					'id': 'checkbox-4',
-					'type': 'checkbox',
-					'for': 'checkbox-4'
+					'id': 'checkbox-4'
 				},
 				{
 					'label': 'Вариант ответа №2',
-					'id': 'checkbox-5',
-					'type': 'checkbox',
-					'for': 'checkbox-5'
+					'id': 'checkbox-5'
 				},
 				{
 					'label': 'Вариант ответа №3',
-					'id': 'checkbox-6',
-					'type': 'checkbox',
-					'for': 'checkbox-6'
+					'id': 'checkbox-6'
 				}]
 		},
 		{
-			'questionTitle': '3. Вопрос №3',
+			'questionTitle': 'Вопрос №',
 			'questionList': [
 				{
 					'label': 'Вариант ответа №1',
-					'id': 'checkbox-7',
-					'type': 'checkbox',
-					'for': 'checkbox-7'
+					'id': 'checkbox-7'
 				},
 				{
 					'label': 'Вариант ответа №2',
-					'id': 'checkbox-8',
-					'type': 'checkbox',
-					'for': 'checkbox-8'
+					'id': 'checkbox-8'
 				},
 				{
 					'label': 'Вариант ответа №3',
-					'id': 'checkbox-9',
-					'type': 'checkbox',
-					'for': 'checkbox-9'
+					'id': 'checkbox-9'
 				}]
 		}
 	]
@@ -99,8 +81,8 @@ var dom = {
 
 		for (var i = 0; i < data.questions.length; i++) {
 				var questionTitle = document.createElement('p');
-				questionTitle.className = 'ul-title ul-title-' + (i+1);
-				questionTitle.innerHTML = data.questions[i].questionTitle;
+				questionTitle.className = 'ul-title ul-title-' + (i + 1);
+				questionTitle.innerHTML = (i + 1) + '. ' + data.questions[i].questionTitle + (i + 1);
 				form.appendChild(questionTitle);
 
 				var list = document.createElement('ul');
@@ -109,12 +91,12 @@ var dom = {
 				
 				for (var j = 0; j < data.questions[i].questionList.length; j++) {
 					var item = document.createElement('li');
-					item.className = 'item item-'+ (j+1);
+					item.className = 'item item-'+ (j + 1);
 					list.appendChild(item);
 
 					var checkBox = document.createElement('input');
 					checkBox.className = 'my-checkbox';
-					checkBox.setAttribute('type', data.questions[i].questionList[j].type);
+					checkBox.setAttribute('type', 'checkbox');
 					checkBox.setAttribute('id', data.questions[i].questionList[j].id);					
 					item.appendChild(checkBox);
 
